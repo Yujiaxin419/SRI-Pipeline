@@ -19,4 +19,24 @@ python -m jcvi.compara.catalog ortholog --no_strip_names ${sample1} ${sample2}
 
 ## Syndex calculating
 ```
+python syndex.py <syn.config> <output>
+```
+- the format of `syn.config` file should be:
+```
+## Anchore file from jcvi A.bed B.bed
+A6-26.E4-63.lifted.anchors      A6-26.bed       E4-63.bed
+A6-26.PG0009.lifted.anchors     A6-26.bed       PG0009.bed
+A6-26.PG1008.lifted.anchors     A6-26.bed       PG1008.bed
+```
+
+## Output
+- The ouput file looks like:
+```
+#sample_pair    syndex
+An-1,C24        0.9769
+An-1,Cvi        0.9757
+An-1,Eri        0.9773
+Kyo,An-1        0.9732
+An-1,Ler        0.9754
+Sha,An-1        0.9719
 ```
