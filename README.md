@@ -13,7 +13,8 @@ cut -f 4 ${sample}.bed |seqkit grep -f - ${gff3/gff3/cds} > ${sample}.cds
 ```
 2. Syntenty inference
 ```
-
+# sample1 & sample2 is a pair of genomes who needs to compare.
+python -m jcvi.compara.catalog ortholog --no_strip_names ${sample1} ${sample2}
 ```
 
 ## Syndex calculating
