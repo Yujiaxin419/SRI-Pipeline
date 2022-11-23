@@ -31,7 +31,7 @@ A6-26.PG1008.lifted.anchors     A6-26.bed       PG1008.bed
 
 ## Output
 - The ouput file looks like:
-```
+```bash
 #sample_pair    syndex
 An-1,C24        0.9769
 An-1,Cvi        0.9757
