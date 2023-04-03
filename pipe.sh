@@ -16,7 +16,7 @@ less sample.list | while read sample1;
   (less sample.list | while read sample2;
     do
     ( if [ "${sample1}" != "${sample2}" ]; then
-    echo "~/../tanger/miniconda2/bin/python -m jcvi.compara.catalog ortholog ${sample1} ${sample2}" >>cmd.list;
+    echo "python -m jcvi.compara.catalog ortholog ${sample1} ${sample2}" >>cmd.list;
     fi)
     done)
   done
@@ -30,4 +30,4 @@ awk 'BEGIN{FS="."} {print $2".bed"}' > 2
 paste 0 1 2 > syn.config
 rm 0 1 2
 
-python syndex.py syn.config syndex_out.txt
+python SRI-pipeline.py syn.config syndex_out.txt
