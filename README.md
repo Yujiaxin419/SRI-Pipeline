@@ -1,6 +1,6 @@
-# Syndex-pipeline
+# SRI-pipeline
 ## Introduction
-**Syn**(teny) (in)**dex** is a score that quantifies synteny between two genomes. syndex calculating is based on the result of JCVI [links](https://github.com/tanghaibao/jcvi). This pipeline contains few steps:
+**S(ynteny) R(elationship) I(ndex)** is a score that quantifies synteny between two genomes. SRI calculating is based on the result of JCVI [links](https://github.com/tanghaibao/jcvi). This pipeline contains few steps:
 
 ## Syntenty inference through JCVI
 1. get longest uniq transcripts
@@ -17,7 +17,7 @@ cut -f 4 ${sample}.bed |seqkit grep -f - ${gff3/gff3/cds} > ${sample}.cds
 python -m jcvi.compara.catalog ortholog --no_strip_names ${sample1} ${sample2}
 ```
 
-## Syndex calculating
+## SRI calculating
 ```
 python syndex.py <syn.config> <output>
 ```
@@ -32,7 +32,7 @@ A6-26.PG1008.lifted.anchors     A6-26.bed       PG1008.bed
 ## Output
 - The ouput file looks like:
 ```bash
-#sample_pair    syndex
+#sample_pair    SRI
 An-1,C24        0.9769
 An-1,Cvi        0.9757
 An-1,Eri        0.9773
